@@ -3,7 +3,7 @@ let sessionToken = ''; // Global variable to store session token
 
 function authenticate() {
   const accessCode = document.getElementById("access-code").value;
-  fetch("http://localhost:5000/authenticate", {
+  fetch("https://squid-app-mdj7h.ondigitalocean.app/authenticate", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -32,7 +32,7 @@ function authenticate() {
 }
 
 function fetchApplications() {
-  fetch("http://localhost:5000/applications/v1", {
+  fetch("https://squid-app-mdj7h.ondigitalocean.app/applications/v1", {
     headers: {
       Authorization: sessionToken,
     },
@@ -117,7 +117,7 @@ function fetchApplications() {
 }
 
 function fetchParticipationUpdates() {
-  fetch("http://localhost:5000/participation-mode-updates/v1", {
+  fetch("https://squid-app-mdj7h.ondigitalocean.app/participation-mode-updates/v1", {
     headers: {
       Authorization: sessionToken,
     },
