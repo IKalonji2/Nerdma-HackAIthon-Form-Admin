@@ -1,0 +1,171 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.logo-container {
+    flex-shrink: 0;
+}
+
+.logo {
+    height: 55px;
+    margin-right: 20px;
+    width: auto;
+}
+
+header h1 {
+    margin: 0;
+    color: #333;
+}
+
+#app {
+    max-width: 95%;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1, h2 {
+    color: #333;
+}
+
+#auth-section {
+    width: 40%;
+    border: 2px solid #c71212;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff; /* White background */
+    color: #333; /* Dark text */
+    border-radius: 5px;
+}
+
+input[type="password"], button {
+    width: 100%; /* Set to full width of the parent */
+    margin: 10px 0;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc; /* Add a border to input and button */
+}
+
+input[type="password"]:focus, button:focus {
+    outline: none;
+    border-color: #c71212; /* Customize the border color on focus */
+    box-shadow: 0 0 5px rgba(199, 18, 18, 0.5); /* Add a subtle shadow */
+}
+
+button {
+    background-color: #851616; /* Red button */
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #b71c1c; /* Darker red on hover */
+}
+
+#auth-message {
+    margin-top: 10px;
+    text-align: center; /* Center the text inside the auth message */
+}
+
+/* Add styles for collapsible containers and the table */
+.applicant-container {
+    border: 1px solid #ddd;
+    padding: 30px;
+    margin: 10px 10px;
+    cursor: pointer;
+    background-color: #f9f9f9;
+}
+
+.applicant-container h3 {
+    margin: 5px;
+    margin-right: 20px;
+    color: #8f1313e7; /* Red text */
+}
+
+.applicant-content {
+    display: none;
+    border-top: 1px solid #ccc;
+    font-size: 12px; /* Match the font size with the table */
+}
+
+#applicant-container {
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#table-container {
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-left: 90px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    font-size: 14px; /* Adjust the font size for the table */
+}
+
+th, td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: left;
+    font-size: 12px; /* Adjust the font size for table headers and cells */
+}
+
+th {
+    background-color: #8b57579d;
+    color: black; /* Dark text */
+    font-size: 13px; /* Adjust the font size for table headers */
+}
+
+#button-container {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.download-btn {
+    display: inline-block;
+    width: auto;
+    padding: 8px 16px;
+    margin: 10px 0;
+    font-size: 14px;
+    background-color: #8d1111; /* Red button */
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.download-btn:hover {
+    background-color: #b71c1c; /* Darker red on hover */
+}
+
+/* Chart.js customization */
+#participationModeChart {
+    margin-top: 20px;
+}

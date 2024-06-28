@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nerdma Hack-AI-thon Applications</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        #charts-container {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        .chart-container {
+            width: 30%;
+            min-width: 300px;
+        }
+        .applicant-count-card, .unique-email-count-card {
+            display: inline-block;
+            padding: 10px;
+            margin: 10px;
+            background-color: #f2f2f2;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 18px;
+            font-weight: bold;
+            text-align: center;
+        }
+        .header-flex {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="images/logo.png" alt="Nerdma Logo" class="logo">
+        </div>
+    </header>
+    <div id="app">
+        <h1>Nerdma Hack-AI-thon Applications</h1>
+        <hr>
+        <div id="auth-section">
+            <h2>Please enter the access code to view the applications</h2>
+            <input type="password" id="access-code" placeholder="Access Code" />
+            <button onclick="authenticate()">Submit</button>
+            <div id="auth-message"></div>
+        </div>
+        <div id="applications-section" style="display: none">
+            <div id="applicant-container">
+                <div id="applications"></div>
+            </div>
+            <div id="table-container" style="width: 100%">
+                <div class="header-flex">
+                    <h3>Graphical representation of the applications</h3>
+                    <div id="applicant-count" class="applicant-count-card" style="background-color: rgba(116, 8, 8, 0.384);">0 applications received</div>
+                </div>
+                <br>
+                <hr>
+                <div id="charts-container">
+                    <div class="chart-container">
+                        <h4>Applicants per Track</h4>
+                        <canvas id="trackChart" width="40" height="20"></canvas>
+                    </div>
+                    <div class="chart-container">
+                        <h4>Applicants per Participation Mode</h4>
+                        <canvas id="participationModeChart" width="40" height="20"></canvas>
+                    </div>
+                    <div class="chart-container">
+                        <h4>Applicants per Team</h4>
+                        <canvas id="teamChart" width="40" height="20"></canvas>
+                    </div>
+                </div>
+                <br>
+                <hr>
+                <div id="button-container">
+                    <button class="download-btn" onclick="downloadCSV()">
+                        Download as CSV
+                    </button>
+                </div>
+                <div id="applications-table"></div><br>
+                <div id="participation-updates">
+                    <div class="header-flex">
+                        <h3>Participation Mode Updates</h3>
+                        <div id="unique-email-count" class="unique-email-count-card" style="background-color: rgba(116, 8, 8, 0.384);">0 unique emails</div>
+                    </div>
+                    <div id="updates-table"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
